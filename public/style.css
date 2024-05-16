@@ -1,0 +1,275 @@
+:root {
+    font-size: 1.8vh;
+    --light-green: #00c954;
+    --dark-black: #121315;
+    --dark-grey: #1a1b1d;
+    --light-grey: #282a2d;
+    --white-translucid: #ffffff1f;
+}
+
+* {
+    font-family: "Mulish", sans-serif;
+    font-size: 1rem;
+    color: white;
+}
+
+body {
+    min-height: 90vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-grey);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: var(--dark-black);
+    width: 100%;
+    height: 6rem;
+}
+
+h2 {
+    width: 85%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding-bottom: 0.5rem;
+}
+
+.header-div {
+    width: 8%;
+    padding-inline: 3rem;
+}
+
+.header-div img {
+    width: 3rem;
+}
+
+.header-div h1, span {
+    font-size: 1.8rem;
+}
+
+.header-div h4 {
+    padding-inline: 1rem;
+    margin: 0;
+}
+
+#user-div {
+    background-color: var(--white-translucid);
+    cursor: pointer;
+    width: fit-content;
+    padding: 0.8rem;
+    margin-right: 2rem;
+    border-radius: 2rem;
+}
+
+#page-content {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    background-color: var(--dark-black);
+    padding: 2rem;
+    border: none;
+    border-radius: 1.2rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+label {
+    width: 100%;
+    align-self: left;
+}
+
+input, select {
+    background-color: rgba(255, 255, 255, 0.071);
+    border-radius: 0.4rem;
+    margin-block: 0.5rem;
+    padding: 0.8rem;
+    transition: 0.4s;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.273);
+    width: auto;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--light-green);
+}
+
+#form-get-by-genre .column-left {
+    width: 48%;
+}
+
+#card-song-list {
+    display: none;
+    background-color: var(--dark-black);
+    padding: 2rem;
+    border: none;
+    border-radius: 1.2rem;
+    width: 80%;
+    align-items: flex-start;
+    transition: 0.4s;
+}
+
+.song-list {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.045);
+    border-radius: 0rem;
+    text-align: left;
+    padding: 0;
+}
+
+.song-list a {
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding-block: 1rem;
+    border: none;
+}
+
+.song-list a:hover {
+    background-color: var(--white-translucid);
+}
+
+#song-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+
+#song-detail div {
+    width: 65%;
+    padding-block: 2.5rem;
+    padding-inline: 0.5rem;
+    margin-left: 2rem;
+    background-color: rgba(255, 255, 255, 0.045);
+    border-radius: 0.6rem;
+}
+
+#song-detail img {
+    width: 8rem;
+    margin-bottom: 1rem;
+}
+
+#song-detail h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+#song-detail p {
+    opacity: 0.6;
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    width: 100%;
+    border: 1px solid var(--white-translucid);
+}
+
+option {
+    background-color: var(--dark-black);
+}
+
+.icon-btn * {
+    height: 2rem;
+    width: 2rem;
+}
+
+.icon-btn {
+    padding-inline: 0.8rem;
+    padding-block: 0.5rem;
+    border-radius: 2rem;
+    transition: 0.4s;
+}
+
+.icon-btn:hover {
+    background-color: var(--white-translucid);
+}
+
+.btn-high-emphasis, .btn-low-emphasis,.icon-btn {
+    font-weight: 800;
+    opacity: 0.8;
+    transition: all .2s ease-in-out; 
+}
+
+.btn-high-emphasis, .btn-low-emphasis {
+    width: 8.8rem;
+    height: 3.3rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.btn-low-emphasis {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-high-emphasis {
+    border: none;
+    background-color: var(--light-green);
+    color: black;
+}
+
+.text-btn {
+    border: none;
+    box-shadow: none;
+}
+
+.btn-high-emphasis:hover {
+    opacity: 1;
+}
+
+.btn-low-emphasis:hover {
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
+.flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}

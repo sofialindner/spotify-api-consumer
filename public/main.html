@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HitFy</title>
+
+    <link rel="icon" type="imagem/png" href="/assets/imgs/spotify-logo.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <header class="flex-space">
+        <div class="header-div flex-space">
+            <img src="/assets/imgs/spotify-logo.png">
+            <h1>Hit<span style="font-weight: 200">Fy</span></h1>    
+        </div>
+        <div id="user-div" class="header-div flex-space">
+            <img src="/assets/imgs/user.png" style="width: 2rem">
+            <h4 id="display-name"></h4>
+        </div>
+    </header>
+    <div id="page-content">
+        <div class="container">
+            <input type="hidden" id='hidden_token'>  
+
+            <h2>Pesquisar por gênero</h2>     
+            <form id="form-get-by-genre" class="card">
+                <div class="flex-space">
+                    <div class="column-left">
+                        <label for="select-genre">Gênero</label>
+                        <select name="select-genre" id="select-genre">
+                            <option>Selecione...</option>                    
+                        </select>
+                    </div>
+                    <div class="column-left">
+                        <label for="select-playlist">Playlists</label>
+                        <select name="select-playlist" id="select-playlist">
+                            <option>Selecione...</option>                   
+                        </select>
+                    </div>
+                </div>
+                
+                <br>                 
+                <div style="text-align: right">
+                    <button type="submit" id="btn_submit" class="btn-high-emphasis">Pesquisar</button>
+                </div>          
+            </form><br>
+
+            <div id="card-song-list" class="flex-space">
+                <div class="card song-list"></div>
+                <div id="song-detail"></div>
+            </div>   
+        </div>
+        <div class="container">
+            <h2>Criar playlist</h2>
+            <form class="card" id="form-post">
+                <label for="playlist-name">Nome</label>
+                <input type="text" name="playlist-name" id="playlist-name" placeholder="Nome da playlist"><br>
+                <label for="playlist-description">Descrição</label>
+                <input type="text" name="playlist-description" id="playlist-description" placeholder="Descrição da playlist"><br>
+
+                <div style="text-align: right">
+                    <button type="submit" id="btn_post" class="btn-high-emphasis">Criar</button>
+                </div>
+            </form><br><br>
+            
+            <h2>Alterar playlist</h2>
+            <form class="card" id="form-put">
+                <label for="playlist-id">ID</label>
+                <input type="text" name="playlist-id" id="playlist-id" placeholder="ID da playlist"><br>
+                <label for="new-name">Nome</label>
+                <input type="text" name="new-name" id="new-name" placeholder="Novo nome"><br>
+                <label for="new-description">Descrição</label>
+                <input type="text" name="new-description" id="new-description" placeholder="Nova descrição"><br>
+
+                <div style="text-align: right">
+                    <button type="submit" id="btn_update" class="btn-high-emphasis">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/main.js" type="text/javascript"></script>
+</body>
+</html>
